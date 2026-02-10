@@ -1,28 +1,22 @@
-#' Brodmann atlas
+#' Brodmann Areas Atlas
 #'
-#' A historical Brodmann atlas based on files
-#' released with  Pijnenburg et al., NeuroImage, 
-#' 239, 2021, (\href{https://doi.org/10.1016/j.neuroimage.2021.118274}{DOI})
-#' Version 1; 15-01-2021.
-#' \itemize{
-#'  \item{brodmann}{ - brodmann atlas}
-#'  \item{brodmann_3d}{ - brodmann 3d mesh atlas}
-#'}
+#' Brain atlas for the Brodmann areas cortical parcellation
+#' with 39 regions per hemisphere. Contains both 2D polygon geometry
+#' for [ggseg::geom_brain()] and 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @docType data
 #' @name brodmann
+#' @usage data(brodmann)
 #' @keywords datasets
-#' @family ggseg_atlases ggseg3d_atlases
-#' @references Brodmann K (1909). "Vergleichende Lokalisationslehre der Grosshirnrinde". Leipzig: Johann Ambrosius Barth.
-#'     (\href{https://digital.zbmed.de/zbmed/id/554966?}{ZB med})
-#' @import ggseg
-#' @import ggseg3d
-#' @rdname brodmann
+#' @family ggseg_atlases
+#'
+#' @references Brodmann K (1909). Vergleichende Lokalisationslehre der
+#'   Grosshirnrinde. Leipzig: Johann Ambrosius Barth.
+#'   Pijnenburg R, et al. (2021). *NeuroImage*, 239, 118274.
+#'   \doi{10.1016/j.neuroimage.2021.118274}
+#'
+#' @format A [ggseg.formats::ggseg_atlas] object (cortical).
 #' @examples
 #' data(brodmann)
-#' data(brodmann_3d)
+#' brodmann
 "brodmann"
-
-#' @rdname brodmann
-"brodmann_3d"
-

@@ -3,35 +3,27 @@
 \docType{data}
 \name{brodmann}
 \alias{brodmann}
-\alias{brodmann_3d}
-\title{Brodmann atlas}
+\title{Brodmann Areas Atlas}
 \format{
-An object of class \code{brain_atlas} of length 4.
-
-An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4 rows and 4 columns.
+A \link[ggseg.formats:ggseg_atlas]{ggseg.formats::ggseg_atlas} object (cortical).
 }
 \usage{
-brodmann
-
-brodmann_3d
+data(brodmann)
 }
 \description{
-A historical Brodmann atlas based on files
-released with  Pijnenburg et al., NeuroImage, 
-239, 2021, (\href{https://doi.org/10.1016/j.neuroimage.2021.118274}{DOI})
-Version 1; 15-01-2021.
-\itemize{
- \item{brodmann}{ - brodmann atlas}
- \item{brodmann_3d}{ - brodmann 3d mesh atlas}
-}
+Brain atlas for the Brodmann areas cortical parcellation
+with 39 regions per hemisphere. Contains both 2D polygon geometry
+for \code{\link[ggseg:ggbrain]{ggseg::geom_brain()}} and 3D vertex indices for \code{\link[ggseg3d:ggseg3d]{ggseg3d::ggseg3d()}}.
 }
 \examples{
 data(brodmann)
-data(brodmann_3d)
+brodmann
 }
 \references{
-Brodmann K (1909). "Vergleichende Lokalisationslehre der Grosshirnrinde". Leipzig: Johann Ambrosius Barth.
-    (\href{https://digital.zbmed.de/zbmed/id/554966?}{ZB med})
+Brodmann K (1909). Vergleichende Lokalisationslehre der
+Grosshirnrinde. Leipzig: Johann Ambrosius Barth.
+Pijnenburg R, et al. (2021). \emph{NeuroImage}, 239, 118274.
+\doi{10.1016/j.neuroimage.2021.118274}
 }
-\concept{ggseg_atlases ggseg3d_atlases}
+\concept{ggseg_atlases}
 \keyword{datasets}
