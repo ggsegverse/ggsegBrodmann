@@ -68,6 +68,26 @@ ggseg3d(atlas = brodmann_3d) %>%
 
 <img src="man/figures/README-3d-plot.png" width="100%" />
 
-Please note that the ‘ggsegBrodmann’ project is released with a
+## Source annotation files
+
+The FreeSurfer annotation files (`lh.fsaverage_Brodmann.annot`,
+`rh.fsaverage_Brodmann.annot`) in `data-raw/` are from the supplementary
+materials of Pijnenburg et al. (2021), extracted from `Brodmann.zip`.
+These are in fsaverage space (163k vertices) and require resampling to
+fsaverage5 via `mri_surf2surf` before use with the ggsegExtra pipeline.
+
+FreeSurfer also ships `lh.PALS_B12_Brodmann.annot` and
+`rh.PALS_B12_Brodmann.annot` in `$FREESURFER_HOME/subjects/fsaverage/label/`
+as an alternative Brodmann parcellation.
+
+Source: <http://www.dutchconnectomelab.nl/>
+
+Reference: Pijnenburg R, Scholtens LH, Ardesch DJ, de Lange SC, Wei Y,
+van den Heuvel MP (2021). Myelo- and cytoarchitectonic microstructural and
+functional human cortical atlases reconstructed in common MRI space.
+*NeuroImage*, 239, 118274.
+doi:[10.1016/j.neuroimage.2021.118274](https://doi.org/10.1016/j.neuroimage.2021.118274)
+
+Please note that the 'ggsegBrodmann' project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
 this project, you agree to abide by its terms.
