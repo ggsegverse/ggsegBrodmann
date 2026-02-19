@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 # ggsegBrodmann <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ggseg/ggsegBrodmann/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegBrodmann/actions)
+[![R-CMD-check](https://github.com/ggsegverse/ggsegBrodmann/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegBrodmann/actions)
 [![DOI](https://zenodo.org/badge/424723872.svg)](https://zenodo.org/badge/latestdoi/424723872)
 
 <!-- badges: end -->
@@ -31,8 +31,8 @@ NeuroImage, 239, 2021
 15-01-2021.
 
 To learn how to use these atlases, please look at the documentation for
-[ggseg](https://ggseg.github.io/ggseg/) and
-[ggseg3d](https://ggseg.github.io/ggseg3d).
+[ggseg](https://ggsegverse.github.io/ggseg/) and
+[ggseg3d](https://ggsegverse.github.io/ggseg3d).
 
 ## Installation
 
@@ -41,7 +41,7 @@ You can install the released version of ggsegBrodmann from
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("ggseg/ggsegBrodmann")
+remotes::install_github("ggsegverse/ggsegBrodmann")
 ```
 
 ```{r, fig.height=7}

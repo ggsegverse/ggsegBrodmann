@@ -1,0 +1,1 @@
+/Applications/freesurfer/7.4.1/subjects/fsaverage5/surf/lh.white_avg.K

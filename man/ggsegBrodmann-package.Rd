@@ -13,8 +13,8 @@ Brodmann areas atlas for the 'ggseg' ecosystem. Provides a unified 'ggseg_atlas'
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ggseg/ggsegBrodmann}
-  \item Report bugs at \url{https://github.com/ggseg/ggsegBrodmann/issues}
+  \item \url{https://github.com/ggsegverse/ggsegBrodmann}
+  \item Report bugs at \url{https://github.com/ggsegverse/ggsegBrodmann/issues}
 }
 
 }
