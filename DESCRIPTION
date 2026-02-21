@@ -10,7 +10,6 @@ Description: Brodmann areas atlas for the 'ggseg' ecosystem. Provides a unified
     for use with 'ggseg' and 'ggseg3d'.
 License: CC BY 4.0
 Encoding: UTF-8
-LazyData: true
 Depends:
     R (>= 3.5),
     ggseg.formats

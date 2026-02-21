@@ -4,10 +4,6 @@
 #' with 39 regions per hemisphere. Contains both 2D polygon geometry
 #' for [ggseg::geom_brain()] and 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
-#' @docType data
-#' @name brodmann
-#' @usage data(brodmann)
-#' @keywords datasets
 #' @family ggseg_atlases
 #'
 #' @references Brodmann K (1909). Vergleichende Lokalisationslehre der
@@ -15,8 +11,8 @@
 #'   Pijnenburg R, et al. (2021). *NeuroImage*, 239, 118274.
 #'   \doi{10.1016/j.neuroimage.2021.118274}
 #'
-#' @format A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @export
 #' @examples
-#' data(brodmann)
-#' brodmann
-"brodmann"
+#' brodmann()
+brodmann <- function() .brodmann

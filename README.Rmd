@@ -51,26 +51,26 @@ library(ggplot2)
 
 ggplot() +
   geom_brain(
-    atlas = brodmann,
+    atlas = brodmann(),
     mapping = aes(fill = label),
     position = position_brain(hemi ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = brodmann$palette, na.value = "grey") +
+  scale_fill_manual(values = brodmann()$palette, na.value = "grey") +
   theme_void()
 ```
 
 ```{r "noneval", eval=FALSE}
 library(ggseg3d)
 
-ggseg3d(atlas = brodmann) |>
+ggseg3d(atlas = brodmann()) |>
   pan_camera("right lateral")
 ```
 
 ```{r "orca", include=FALSE}
 library(ggseg3d)
 
-p <- ggseg3d(atlas = brodmann) |>
+p <- ggseg3d(atlas = brodmann()) |>
   add_glassbrain(hemisphere = "left") |>
   pan_camera("right lateral") |>
   plotly::add_annotations(
