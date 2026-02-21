@@ -12,6 +12,7 @@
 #'   \doi{10.1016/j.neuroimage.2021.118274}
 #'
 #' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @import ggseg.formats
 #' @export
 #' @examples
 #' brodmann()

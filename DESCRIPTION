@@ -11,7 +11,8 @@ Description: Brodmann areas atlas for the 'ggseg' ecosystem. Provides a unified
 License: CC BY 4.0
 Encoding: UTF-8
 Depends:
-    R (>= 3.5),
+    R (>= 3.5)
+Imports:
     ggseg.formats
 Suggests:
     ggseg,
