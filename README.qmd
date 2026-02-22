@@ -1,16 +1,18 @@
 ---
-output: github_document
+format: gfm
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.qmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| label: setup
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%",
   fig.width = 10,
+  out.width = "100%",
   fig.retina = 3
 )
 ```
@@ -18,9 +20,8 @@ knitr::opts_chunk$set(
 # ggsegBrodmann <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ggsegverse/ggsegBrodmann/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegBrodmann/actions)
+[![R-CMD-check](https://github.com/ggseg/ggsegBrodmann/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegBrodmann/actions)
 [![DOI](https://zenodo.org/badge/424723872.svg)](https://zenodo.org/badge/latestdoi/424723872)
-
 <!-- badges: end -->
 
 This package contains dataset for plotting the
@@ -31,20 +32,38 @@ NeuroImage, 239, 2021
 15-01-2021.
 
 To learn how to use these atlases, please look at the documentation for
-[ggseg](https://ggsegverse.github.io/ggseg/) and
-[ggseg3d](https://ggsegverse.github.io/ggseg3d).
+[ggseg](https://ggseg.github.io/ggseg/) and
+[ggseg3d](https://ggseg.github.io/ggseg3d).
 
 ## Installation
+
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+```{r}
+#| label: install-r-universe
+#| eval: false
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("ggsegBrodmann")
+```
 
 You can install the released version of ggsegBrodmann from
 [GitHub](https://github.com/) with:
 
-``` r
+```r
 # install.packages("remotes")
-remotes::install_github("ggsegverse/ggsegBrodmann")
+remotes::install_github("ggseg/ggsegBrodmann")
 ```
 
-```{r, fig.height=7}
+## Example
+
+```{r}
+#| label: 2d-plot
+#| fig-height: 7
 library(ggseg)
 library(ggsegBrodmann)
 library(ggplot2)
@@ -60,32 +79,31 @@ ggplot() +
   theme_void()
 ```
 
-```{r "noneval", eval=FALSE}
+```{r}
+#| label: 3d-example
+#| eval: false
 library(ggseg3d)
 
 ggseg3d(atlas = brodmann()) |>
   pan_camera("right lateral")
 ```
 
-```{r "orca", include=FALSE}
+```{r}
+#| label: 3d-snapshot
+#| include: false
+#| eval: !expr file.exists(Sys.which("chrome")) || file.exists(Sys.which("chromium"))
 library(ggseg3d)
 
-p <- ggseg3d(atlas = brodmann()) |>
+ggseg3d(atlas = brodmann()) |>
   add_glassbrain(hemisphere = "left") |>
   pan_camera("right lateral") |>
-  plotly::add_annotations(
-    text = "Screen capture",
-    legendtitle = TRUE, showarrow = FALSE,
-    font = list(
-      color = "#000000b4",
-      family = "sans serif",
-      size = 50
-    )
-  )
-plotly::orca(p, "man/figures/README-3d-plot.png")
+  snapshot_brain("man/figures/README-3d-plot.png")
 ```
 
-```{r "incl", echo=FALSE}
+```{r}
+#| label: 3d-include
+#| echo: false
+#| eval: !expr file.exists("man/figures/README-3d-plot.png")
 knitr::include_graphics("man/figures/README-3d-plot.png")
 ```
 
