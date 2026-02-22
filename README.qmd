@@ -1,10 +1,11 @@
 ---
-output: github_document
+format: gfm
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -44,7 +45,8 @@ You can install the released version of ggsegBrodmann from
 remotes::install_github("ggsegverse/ggsegBrodmann")
 ```
 
-```{r, fig.height=7}
+```{r}
+#| fig-height: 7
 library(ggseg)
 library(ggsegBrodmann)
 library(ggplot2)
@@ -60,14 +62,18 @@ ggplot() +
   theme_void()
 ```
 
-```{r "noneval", eval=FALSE}
+```{r}
+#| label: noneval
+#| eval: false
 library(ggseg3d)
 
 ggseg3d(atlas = brodmann()) |>
   pan_camera("right lateral")
 ```
 
-```{r "orca", include=FALSE}
+```{r}
+#| label: orca
+#| include: false
 library(ggseg3d)
 
 p <- ggseg3d(atlas = brodmann()) |>
@@ -82,10 +88,12 @@ p <- ggseg3d(atlas = brodmann()) |>
       size = 50
     )
   )
-plotly::orca(p, "man/figures/README-3d-plot.png")
+snapshot_brain("man/figures/README-3d-plot.png")
 ```
 
-```{r "incl", echo=FALSE}
+```{r}
+#| label: incl
+#| echo: false
 knitr::include_graphics("man/figures/README-3d-plot.png")
 ```
 
