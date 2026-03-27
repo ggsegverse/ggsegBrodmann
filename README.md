@@ -1,10 +1,19 @@
 # ggsegBrodmann
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/ggsegverse/ggsegBrodmann/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegBrodmann/actions/workflows/R-CMD-check.yaml)
+[![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegBrodmann)](https://ggsegverse.r-universe.dev/ggsegBrodmann)
+<!-- badges: end -->
+
 Brodmann Areas Atlas for the ggsegverse Ecosystem.
 
 ## Installation
 
 ``` r
+# From r-universe
+install.packages("ggsegBrodmann", repos = "https://ggsegverse.r-universe.dev")
+
+# From GitHub
 # install.packages("remotes")
 remotes::install_github("ggsegverse/ggsegBrodmann")
 ```
