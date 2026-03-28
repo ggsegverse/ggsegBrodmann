@@ -1,10 +1,21 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # ggsegBrodmann
 
 <!-- badges: start -->
-
 [![R-CMD-check](https://github.com/ggsegverse/ggsegBrodmann/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegBrodmann/actions/workflows/R-CMD-check.yaml)
 [![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegBrodmann)](https://ggsegverse.r-universe.dev/ggsegBrodmann)
 <!-- badges: end -->
@@ -13,7 +24,7 @@ Brodmann Areas Atlas for the ggsegverse Ecosystem.
 
 ## Installation
 
-``` r
+```{r, eval = FALSE}
 # From r-universe
 install.packages("ggsegBrodmann", repos = "https://ggsegverse.r-universe.dev")
 
@@ -23,24 +34,18 @@ remotes::install_github("ggsegverse/ggsegBrodmann")
 ```
 
 ## Atlases
-
 ### brodmann
-
+ 
 Brodmann areas cortical parcellation with 39 regions per hemisphere.
 
-``` r
+```{r brodmann}
 library(ggsegBrodmann)
 plot(brodmann())
 ```
+## Data source
 
-<img src="man/figures/README-brodmann-1.png" alt="" width="100%" /> \##
-Data source
+Annotation files from [Dutch Connectome Lab](http://www.dutchconnectomelab.nl/) (fsaverage space, resampled to fsaverage5).
 
-Annotation files from [Dutch Connectome
-Lab](http://www.dutchconnectomelab.nl/) (fsaverage space, resampled to
-fsaverage5).
-
-- **Reference**: Pijnenburg et al. (2021)
-  [doi:10.1016/j.neuroimage.2021.118274](https://doi.org/10.1016/j.neuroimage.2021.118274)
+- **Reference**: Pijnenburg et al. (2021) [doi:10.1016/j.neuroimage.2021.118274](https://doi.org/10.1016/j.neuroimage.2021.118274)
 
 - **Date obtained**: 2026-02-21
