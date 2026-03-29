@@ -1,6 +1,6 @@
 Package: ggsegBrodmann
 Title: Brodmann Areas Atlas for the 'ggsegverse' Ecosystem
-Version: 2.0.1
+Version: 2.0.2
 Authors@R: c(person("Athanasia Mo", "Mowinckel",
                     email = "a.m.mowinckel@psykologi.uio.no",
                     role = c("aut", "cre"),
