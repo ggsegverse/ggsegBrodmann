@@ -16,4 +16,5 @@
 #' @export
 #' @examples
 #' brodmann()
+#' plot(brodmann())
 brodmann <- function() .brodmann
