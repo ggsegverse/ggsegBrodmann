@@ -4,7 +4,7 @@ Brain atlas for the Brodmann areas cortical parcellation with 39 regions
 per hemisphere. Contains both 2D polygon geometry for
 [`ggseg::geom_brain()`](https://ggsegverse.github.io/ggseg/reference/ggbrain.html)
 and 3D vertex indices for
-[`ggseg3d::ggseg3d()`](https://lcbc-uio.github.io/ggseg3d//reference/ggseg3d.html).
+[`ggseg3d::ggseg3d()`](https://ggsegverse.github.io/ggseg3d/reference/ggseg3d.html).
 
 ## Usage
 

@@ -1,54 +1,36 @@
 # ggsegBrodmann
 
-This package contains dataset for plotting the
-[Brodmann](https://digital.zbmed.de/zbmed/id/554966?) atlas with ggseg
-and ggseg3d, based on the supplementary materials of Pijnenburg et al.,
-NeuroImage, 239, 2021
-[DOI](https://doi.org/10.1016/j.neuroimage.2021.118274); Version 1;
-15-01-2021.
-
-To learn how to use these atlases, please look at the documentation for
-[ggseg](https://ggsegverse.github.io/ggseg/) and
-[ggseg3d](https://ggsegverse.github.io/ggseg3d).
+Brodmann Areas Atlas for the ggsegverse Ecosystem.
 
 ## Installation
 
-You can install the released version of ggsegBrodmann from
-[GitHub](https://github.com/) with:
-
 ``` r
+# From r-universe
+install.packages("ggsegBrodmann", repos = "https://ggsegverse.r-universe.dev")
+
+# From GitHub
 # install.packages("remotes")
 remotes::install_github("ggsegverse/ggsegBrodmann")
 ```
 
+## Atlases
+
+### brodmann
+
+Brodmann areas cortical parcellation with 39 regions per hemisphere.
+
 ``` r
-library(ggseg)
 library(ggsegBrodmann)
-library(ggplot2)
-
-ggplot() +
-  geom_brain(
-    atlas = brodmann(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = brodmann()$palette, na.value = "grey") +
-  theme_void()
+plot(brodmann())
 ```
 
-![](reference/figures/README-2d-plot-1.png)
+![](reference/figures/README-brodmann-1.png) \## Data source
 
-``` r
-library(ggseg3d)
+Annotation files from [Dutch Connectome
+Lab](http://www.dutchconnectomelab.nl/) (fsaverage space, resampled to
+fsaverage5).
 
-ggseg3d(atlas = brodmann()) |>
-  pan_camera("right lateral")
-```
+- **Reference**: Pijnenburg et al. (2021)
+  [doi:10.1016/j.neuroimage.2021.118274](https://doi.org/10.1016/j.neuroimage.2021.118274)
 
-![](reference/figures/README-3d-plot.png)
-
-Please note that the ‘ggsegBrodmann’ project is released with a
-[Contributor Code of
-Conduct](https://ggsegverse.github.io/ggsegBrodmann/CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
+- **Date obtained**: 2026-02-21
