@@ -11,13 +11,13 @@ Source:
 [`DESCRIPTION`](https://github.com/ggsegverse/ggsegBrodmann/blob/main/DESCRIPTION)
 
 Mowinckel A (2026). *ggsegBrodmann: Brodmann Areas Atlas for the
-'ggsegverse' Ecosystem*. R package version 2.0.1,
+'ggsegverse' Ecosystem*. R package version 2.0.2,
 <https://github.com/ggsegverse/ggsegBrodmann>.
 
     @Manual{,
       title = {ggsegBrodmann: Brodmann Areas Atlas for the 'ggsegverse' Ecosystem},
       author = {Athanasia Mo Mowinckel},
       year = {2026},
-      note = {R package version 2.0.1},
+      note = {R package version 2.0.2},
       url = {https://github.com/ggsegverse/ggsegBrodmann},
     }
